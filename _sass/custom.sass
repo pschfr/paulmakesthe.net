@@ -1,11 +1,8 @@
-// Calms down emojis
-.emoji
-	filter: grayscale(1)
-
 // Fancy links
 a
+	-webkit-tap-highlight-color: transparent
 	color: inherit
 	text-decoration-skip: ink
-	// Keeps the focus consistant with Tachyons
+	transition: all .25s !important
 	&:focus
-		outline: 1px dotted
+		outline: 1px solid !important
