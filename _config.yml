@@ -11,6 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://paulmakesthe.net" # the base hostname & protocol for your site, e.g. http://example.com
 github: "https://github.com/pschfr/paulmakesthe.net"
+analytics: "UA-76037357-1"
 
 # Build settings
 markdown: kramdown
@@ -29,12 +30,4 @@ sass:
 plugins:
   - hawkins
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-analytics
-
-# Google Analytics info
-jekyll_analytics:
-  GoogleAnalytics:
-    id: UA-76037357-1
-

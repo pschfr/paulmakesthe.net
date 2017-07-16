@@ -10,5 +10,8 @@ layout: compress
 			{{ content }}
 		</main>
 		{% include footer.html %}
+		{% if jekyll.environment == 'production' %}
+			{% include analytics.html %}
+		{% endif %}
 	</body>
 </html>
