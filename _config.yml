@@ -12,20 +12,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://paulmakesthe.net" # the base hostname & protocol for your site, e.g. http://example.com
 github: "https://github.com/pschfr/paulmakesthe.net"
 
-# jekyll-seo-tag stuff
-twitter:
-  username: pschfr
-webmaster_verifications:
-  google: 6oE0AWXPQEiL1noMkdqnjPuj7L8ZcEWeNtGROTbBmrg
-  bing: CFF8D2634124B04EDC4FD8E13B0988A3
-
-jekyll_analytics:
-  GoogleAnalytics:
-    id: UA-76037357-1
-
-# Reset permalinks
-permalink: none
-
 # Build settings
 markdown: kramdown
 
@@ -46,3 +32,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-analytics
+
+# Google Analytics info
+jekyll_analytics:
+  GoogleAnalytics:
+    id: UA-76037357-1
+
