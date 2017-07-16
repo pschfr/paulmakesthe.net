@@ -5,7 +5,7 @@ permalink: /archive
 ---
 <h1>Blog Archive</h1>
 {% for post in site.posts %}
-	<a href="{{ post.url }}" class="db b">{{ post.title }}</a>
+	<a href="{{ post.url | prepend: site.github.url }}" class="db b">{{ post.title }}</a>
 	<em>{{ post.date | date: '%B %d, %Y' }}</em>
 	{{ post.excerpt }}
 {% endfor %}
