@@ -1,0 +1,11 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ site.title | escape }}, {{ site.tagline | escape }}</title>
+	{% capture styles %}{% include style.sass %}{% endcapture %}
+	<style>{{ styles | sassify }}</style>
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+	<meta name="theme-color" content="#111">
+	{% seo title=false %}
+</head>

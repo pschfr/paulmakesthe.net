@@ -1,0 +1,11 @@
+<header class="pv4-ns pa3 mw7 center tracked bb b--gray">
+	<h1 class="mb0 mr3-ns dib"><a class="dim link near-white" href="/">{{ site.title }}</a></h1>
+	<h2 class="f5 light-silver i normal dib">{{ site.tagline }}</h2>
+	<nav>
+		{% for link in site.pages %}
+			{% if link.title %}
+				<a href="{{ link.permalink }}" class="link dim mr2 {% if page.url == link.url %}underline{% endif %}">{{ link.title }}</a>
+			{% endif %}
+		{% endfor %}
+	</nav>
+</header>
