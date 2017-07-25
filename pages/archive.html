@@ -5,7 +5,7 @@ permalink: /archive
 ---
 {% for post in site.posts %}
 	<h2 class="mt0 mb1">
-		<a href="{{ post.url }}" class="dim">
+		<a href="{{ post.url | prepend: site.baseurl }}" class="dim">
 			{{ post.title }}
 		</a>
 	</h2>

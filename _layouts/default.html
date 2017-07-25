@@ -11,10 +11,10 @@ layout: compress
 		</main>
 		{% include footer.html %}
 		{% if page.url == '/' %}
-			 <script src="/js/lastfm.js" async></script> 
+			<script src="{{ "/js/lastfm.js" | prepend: site.baseurl }}" async></script>
 		{% elsif page.url == '/contact' %}
-			 <script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps_key }}&callback=initMap" async defer></script> 
-			 <script src="/js/maps.js"></script> 
+			<script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps_key }}&callback=initMap" async defer></script>
+			<script src="{{ "/js/maps.js" | prepend: site.baseurl }}"></script>
 		{% endif %}
 		{% if jekyll.environment == 'production' %}
 			{% include analytics.html %}

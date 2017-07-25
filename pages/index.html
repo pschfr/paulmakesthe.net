@@ -11,7 +11,7 @@ permalink: /
 		<span id="state">I last listened to: <br/></span>
 		<img id="cover" class="fl mt2 mr2 h2 w2" />
 		<span id="recenttracks">&hellip;</span>
-		<img src="/img/scrobbling.gif" alt="Now Playing" title="Now Playing" id="nowplaying" style="display: none" />
+		<img src="{{ "/img/scrobbling.gif" | prepend: site.baseurl }}" alt="Now Playing" title="Now Playing" id="nowplaying" style="display: none" />
 		<small id="since" class="db i" style="visibility: hidden">
 			That is one of <span id="number"></span> tracks since Sept. 2012!
 		</small>
@@ -21,14 +21,14 @@ permalink: /
 <div class="fl w-100 w-50-ns pl2-ns">
 	{% if site.available %}
 		<p class="ba br2 b--gray pa3 mb4 tc">
-			Hey! I&#8217;m currently looking for a new full-time position! If you or someone you know is looking, <a href="/contact" class="dim">contact me!</a>
+			Hey! I&#8217;m currently looking for a new full-time position! If you or someone you know is looking, <a href="{{ "/contact" | prepend: site.baseurl }}" class="dim">contact me!</a>
 		</p>
 	{% endif %}
 	<h3 class="mt0">Latest Posts</h3>
 	<ul class="list pl0">
 		{% for post in site.posts %}
 			<li class="mb2">
-				<a href="{{ post.url }}" class="dim">{{ post.title }}</a>
+				<a href="{{ post.url | prepend: site.baseurl }}" class="dim">{{ post.title }}</a>
 				<small class="db i">{{ post.date | date: '%B %-d, %Y' }}</small>
 			</li>
 		{% endfor %}
