@@ -1,8 +1,29 @@
 ---
 layout: default
 ---
-<article itemscope itemtype="http://schema.org/BlogPosting" itemprop="articleBody">
-	<h1 class="mb1">{{ page.title }}</h1>
-	<h5 class="mt0"><em>{{ page.date | date: "%B %-d, %Y" }}</em></h5>
+<article class="measure-wide" itemscope itemtype="http://schema.org/BlogPosting" itemprop="articleBody">
+	<h1 class="mt0 mb1">{{ page.title }}</h1>
+	<h5 class="mt0 i normal">
+		Published {{ page.date | date: "%B %-d, %Y" }}
+		<span class="fw6 ml1 mr1">&middot;</span>
+		<a href="https://twitter.com/share?text={{ page.title | uri_escape }}&url={{ page.url | prepend: site.url | uri_escape }}&via={{ site.username }}" target="_blank" rel="noreferrer noopener" class="dim link">Tweet</a>
+		<span class="fw6 ml1 mr1">&middot;</span>
+		<a href="{{ page.url | prepend: site.url }}" class="dim link">Permalink</a>
+	</h5>
 	{{ content }}
 </article>
+
+<aside class="measure-wide tc pv2 mt5 bt b--gray">
+	<nav>
+		{% if page.previous.url %}
+			<a href="{{ page.previous.url }}" class="db w-50 fl dim">⬅ {{ page.previous.title }}</a>
+		{% else %}
+			<span class="db w-50 fl">Nothing previous :/</span>
+		{% endif %}
+		{% if page.next.url %}
+			<a href="{{ page.next.url }}" class="db w-50 fl dim">{{ page.next.title }} ➡</a>
+		{% else %}
+			<span class="db w-50 fl">Nothing next :/</span>
+		{% endif %}
+	</nav>
+</aside>

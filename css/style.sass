@@ -1,0 +1,29 @@
+---
+---
+// Import partials from `sass_dir`
+@import "tachyons"
+
+// Flexbox-powered sticky footer solution, from
+// https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+body
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+
+main
+	flex: 1
+
+// Improved sans font stack, workaround for
+// https://github.com/tachyons-css/tachyons/issues/340
+.sans
+	font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, noto, 'helvetica neue', helvetica, arial, ubuntu, sans-serif
+
+// Fancy links
+a
+	-webkit-tap-highlight-color: transparent
+	color: inherit
+	text-decoration-skip: ink
+	transition: all .25s !important
+	&:focus
+		outline: 1px solid !important
+		text-decoration: none

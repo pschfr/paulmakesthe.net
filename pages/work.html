@@ -1,0 +1,16 @@
+---
+layout: page
+title: Work
+permalink: /work
+---
+<ul class="list pl0 measure-wide">
+	{% for piece in site.data.work %}
+		<li class="mt4 mb5">
+			<h2 class="f4 mb1">
+				<a href="{{ piece.url }}" target="_blank" class="dim">{{ piece.name }}</a>
+				<small class="i normal">{{ piece.date | date: '%B %-d, %Y' }}</small>
+			</h2>
+			<p class="mt0">{{ piece.description }}</p>
+		</li>
+	{% endfor %}
+</ul>

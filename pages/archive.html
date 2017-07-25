@@ -3,9 +3,12 @@ layout: page
 title: Blog
 permalink: /archive
 ---
-<h1>Blog Archive</h1>
 {% for post in site.posts %}
-	<a href="{{ post.url }}" class="db b">{{ post.title }}</a>
-	<em>{{ post.date | date: '%B %d, %Y' }}</em>
+	<h2 class="mt0 mb1">
+		<a href="{{ post.url }}" class="dim">
+			{{ post.title }}
+		</a>
+	</h2>
+	<h5 class="mt0 i normal">Published {{ post.date | date: '%B %-d, %Y' }}</h5>
 	{{ post.excerpt }}
 {% endfor %}

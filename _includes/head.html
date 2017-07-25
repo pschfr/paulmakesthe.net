@@ -3,9 +3,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title | escape }}, {{ site.tagline | escape }}</title>
-	{% capture styles %}{% include style.sass %}{% endcapture %}
-	<style>{{ styles | sassify }}</style>
 	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
 	<meta name="theme-color" content="#111">
+	<link rel="stylesheet" href="/css/style.css">
 </head>
