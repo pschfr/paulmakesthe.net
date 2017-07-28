@@ -4,7 +4,7 @@
 	<nav>
 		{% for link in site.pages %}
 			{% if link.title %}
-				<a href="{{ link.permalink | prepend: site.baseurl }}" class="link dim mr2 {% if page.url == link.url %}underline{% endif %}">{{ link.title | downcase }}</a>
+				<a href="{{ link.permalink | prepend: site.baseurl }}" class="link dim mr2 {% if page.url == link.url %}bb{% endif %}">{{ link.title | downcase }}</a>
 			{% endif %}
 		{% endfor %}
 	</nav>

@@ -3,12 +3,16 @@ layout: page
 title: Blog
 permalink: /archive
 ---
-{% for post in site.posts %}
-	<h2 class="mt0 mb1">
-		<a href="{{ post.url | prepend: site.baseurl }}" class="dim">
-			{{ post.title }}
-		</a>
-	</h2>
-	<h5 class="mt0 i normal">Published {{ post.date | date: '%B %-d, %Y' }}</h5>
-	{{ post.excerpt }}
-{% endfor %}
+<ul class="list pl0 ma0 measure-wide">
+	{% for post in site.posts %}
+		<li>
+			<h2 class="mt0 mb1">
+				<a href="{{ post.url | prepend: site.baseurl }}" class="dim">
+					{{ post.title }}
+				</a>
+			</h2>
+			<h5 class="mt0 i normal">Published {{ post.date | date: '%B %-d, %Y' }}</h5>
+			{{ post.excerpt }}
+		</li>
+	{% endfor %}
+</ul>

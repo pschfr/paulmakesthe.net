@@ -18,7 +18,7 @@ main
 .sans
 	font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, noto, 'helvetica neue', helvetica, arial, ubuntu, sans-serif
 
-// Fancy links
+// Fancy link hovers, improved focus states
 a
 	-webkit-tap-highlight-color: transparent
 	color: inherit
@@ -27,3 +27,25 @@ a
 	&:focus
 		outline: 1px solid !important
 		text-decoration: none
+	&.grow
+		border: 1px solid transparent
+		&:focus
+			outline: none !important
+			border-color: inherit
+
+// Google Maps
+#map
+	>div
+		background-color: #111 !important
+	&:not(:hover)
+		.gmnoprint, .gm-style-cc, [href]
+			display: none !important
+
+// stuff with titles gets help cursor, but not links
+[title]:not([href])
+	cursor: help
+
+// Custom selection colors
+*::selection
+	background-color: #fff
+	color: #111
