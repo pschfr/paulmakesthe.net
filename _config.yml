@@ -2,14 +2,12 @@
 
 # Site settings
 title: Paul Schaefer
-tagline: designer & developer extraordinaire
-email: yeppaul2@gmail.com
+tagline: web designer & developer extraordinaire
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/paulmakesthe.net" # the subpath of your site, e.g. /blog
+  Paul Schaefer is a web designer and developer living in the lovely Pittsburgh, PA.
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://paulmakesthe.net" # the base hostname & protocol for your site, e.g. http://example.com
+
 github: "https://github.com/pschfr/paulmakesthe.net"
 analytics: "UA-76037357-1"
 maps_key: "AIzaSyCXSuswDfS85nCe5rI4-1U4uKNK6SLuR3k"
@@ -36,3 +34,12 @@ plugins:
   - hawkins
   - jekyll-feed
   - jekyll-sitemap
+
+# Exclude from _site
+exclude:
+  - gulpfile.js
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

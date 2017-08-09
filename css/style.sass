@@ -2,6 +2,7 @@
 ---
 // Import partials from `sass_dir`
 @import "tachyons"
+@import "highlighting"
 
 // Flexbox-powered sticky footer solution, from
 // https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
@@ -33,19 +34,10 @@ a
 			outline: none !important
 			border-color: inherit
 
-// Google Maps
-#map
-	>div
-		background-color: #111 !important
-	&:not(:hover)
-		.gmnoprint, .gm-style-cc, [href]
-			display: none !important
+// Google Maps bg color
+#map > div
+	background-color: #111 !important
 
 // stuff with titles gets help cursor, but not links
 [title]:not([href])
 	cursor: help
-
-// Custom selection colors
-*::selection
-	background-color: #fff
-	color: #111

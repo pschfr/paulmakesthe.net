@@ -4,14 +4,15 @@ title: Contact
 permalink: /contact
 ---
 <article class="fl w-100 w-two-thirds-ns pr2-ns">
-	<p>This is where you&#8217;ll get in touch.</p>
+	<p>Have any questions, or want to say hello? Use the form below, or email me at <a href="mailto:hello@paulmakesthe.net">hello@paulmakesthe.net</a>.</p>
 	<form action="{{ "/php/mailer.php" | prepend: site.url }}">
 		<label for="name" class="fw7">What&#8217;s your name?</label><br/>
-		<input type="text" name="name" class="input-reset w-two-thirds-ns w-100" placeholder="John Doe" /><br/><br/>
+		<input type="text" name="name" class="input-reset pa2 w-75-ns w-100" placeholder="John Doe" /><br/><br/>
 		<label for="email" class="fw7">What&#8217;s your email?</label><br/>
-		<input type="email" name="email" class="input-reset w-two-thirds-ns w-100" placeholder="email@mail.com" /><br/><br/>
+		<input type="email" name="email" class="input-reset pa2 w-75-ns w-100" placeholder="email@mail.com" /><br/><br/>
 		<label for="message" class="fw7">What&#8217;s up?</label><br/>
-		<textarea name="message" class="input-reset w-two-thirds-ns w-100"></textarea>
+		<textarea name="message" class="input-reset pa2 w-75-ns w-100"></textarea><br/>
+		<button type="submit" class="mt3 pv2 ph3 w-100 w-auto-ns">Send!</button>
 	</form>
 </article>
 <article id="map" class="fl w-100 w-third-ns pl2-ns vh-50"></article>

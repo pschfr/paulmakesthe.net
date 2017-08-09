@@ -3,11 +3,11 @@ layout: page
 permalink: /
 ---
 <div class="fl w-100 w-50-ns pr2-ns">
-	<h1 class="mt0 mb2">Hello there.</h1>
+	<h1 class="mt0 mb2">Hello there!</h1>
 	<h2 class="mt0">It&#8217;s nice to meet you.</h2>
 	<p>Welcome to my humble corner of the Internet.</p>
 	<p>Feel free to browse around, I won&#8217;t bite.</p>
-	<p>
+	<p class="mt5">
 		<span id="state">I last listened to: <br/></span>
 		<img id="cover" class="fl mt2 mr2 h2 w2" />
 		<span id="recenttracks">&hellip;</span>
@@ -21,7 +21,7 @@ permalink: /
 <div class="fl w-100 w-50-ns pl2-ns">
 	{% if site.available %}
 		<p class="ba br2 b--gray pa3 mb4 tc">
-			Hey! I&#8217;m currently looking for a new full-time position! If you or someone you know is looking, <a href="{{ "/contact" | prepend: site.baseurl }}" class="dim">contact me!</a>
+			Hey! I&#8217;m currently looking for a new full-time position! If you or someone you know is looking, <a href="{{ "/contact" | prepend: site.baseurl }}.html" class="dim">contact me!</a>
 		</p>
 	{% endif %}
 	<h3 class="mt0">Latest Posts</h3>
