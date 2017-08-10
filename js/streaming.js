@@ -44,10 +44,10 @@ function lastFM_request() {
 	xhr.send(null); // Close connection
 }
 
-// Run every 15 secs
+// Run every 1 minute
 setInterval(function() {
 	lastFM_request();
-}, 15000);
+}, 60000);
 
 // Run on load too
 lastFM_request();

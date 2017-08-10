@@ -29,7 +29,7 @@ permalink: /
 		{% for post in site.posts %}
 			<li class="mb2">
 				<a href="{{ post.url | prepend: site.baseurl }}" class="dim">{{ post.title }}</a>
-				<small class="db i">{{ post.date | date: '%B %-d, %Y' }}</small>
+				<small class="db i" title="{{ post.date }}">{{ post.date | date: '%B %-d, %Y' }}</small>
 			</li>
 		{% endfor %}
 	</ul>

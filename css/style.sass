@@ -19,22 +19,32 @@ main
 .sans
 	font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, noto, 'helvetica neue', helvetica, arial, ubuntu, sans-serif
 
-// Fancy link hovers, improved focus states
-a
-	-webkit-tap-highlight-color: transparent
-	color: inherit
-	text-decoration-skip: ink
-	transition: all .25s !important
+// The most important part - the focus outline
+a, input, textarea, button
 	&:focus
 		outline: 1px solid !important
+
+
+// Fancy link hovers, improved focus states
+a
+	color: inherit
+	// Nice underline, skipping decenders
+	text-decoration-skip: ink
+	// Remove weird blue bg on mobile
+	-webkit-tap-highlight-color: transparent
+	// Smoother transitions throughout
+	transition: all .25s !important
+	// Removes additional underline on focus
+	&:focus
 		text-decoration: none
+	// Better focus rings on .grow
 	&.grow
 		border: 1px solid transparent
 		&:focus
 			outline: none !important
 			border-color: inherit
 
-// Google Maps bg color
+// Google Maps bg color before map fully loads
 #map > div
 	background-color: #111 !important
 

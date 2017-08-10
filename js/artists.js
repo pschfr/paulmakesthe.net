@@ -15,7 +15,7 @@ function lastFM_request() {
 			// Loop over artists, appending to page
 			for (var i = 0; i < artists.length; i++) {
 				var linkText = '<a href="' + artists[i].url + '" target="_blank" rel="noreferrer noopener" class="grow link dib tc w-20-ns w-50 pa2 mb4">',
-					imgText = '<img src="' + artists[i].image[3]['\#text'] + '" alt="' + artists[i].name + '" /><br/>',
+					imgText = '<img src="' + artists[i].image[2]['\#text'] + '" alt="' + artists[i].name + '" /><br/>',
 					artistText = '<strong>' + artists[i].name + '</strong><br/>',
 					artistPlays = '<small>' + parseInt(artists[i].playcount).toLocaleString() + ' plays</small>'
 					linkEnd = '</a>';
