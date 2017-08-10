@@ -19,8 +19,14 @@ main
 .sans
 	font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, noto, 'helvetica neue', helvetica, arial, ubuntu, sans-serif
 
+// New font
+.muli
+	font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, noto, 'helvetica neue', helvetica, arial, ubuntu, sans-serif
+	font-size: 17px
+
 // The most important part - the focus outline
 a, input, textarea, button
+	font-family: inherit
 	&:focus
 		outline: 1px solid !important
 
@@ -46,7 +52,7 @@ a
 
 // Google Maps bg color before map fully loads
 #map > div
-	background-color: #111 !important
+	background-color: #000 !important
 
 // stuff with titles gets help cursor, but not links
 [title]:not([href])

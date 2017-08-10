@@ -12,7 +12,7 @@ permalink: /
 		<img id="cover" class="fl mt2 mr2 h2 w2" />
 		<span id="recenttracks">&hellip;</span>
 		<img src="{{ "/img/scrobbling.gif" | prepend: site.baseurl }}" alt="Now Playing" title="Now Playing" id="nowplaying" style="display: none" />
-		<small id="since" class="db i" style="visibility: hidden">
+		<small id="since" class="db" style="visibility: hidden">
 			That is one of <span id="number"></span> tracks since Sept. 2012!
 		</small>
 	</p>
@@ -29,7 +29,7 @@ permalink: /
 		{% for post in site.posts %}
 			<li class="mb2">
 				<a href="{{ post.url | prepend: site.baseurl }}" class="dim">{{ post.title }}</a>
-				<small class="db i" title="{{ post.date }}">{{ post.date | date: '%B %-d, %Y' }}</small>
+				<small class="db" title="{{ post.date }}">{{ post.date | date: '%B %-d, %Y' }}</small>
 			</li>
 		{% endfor %}
 	</ul>

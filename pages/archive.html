@@ -5,13 +5,13 @@ permalink: /archive
 ---
 <ul class="list pl0 ma0 measure-wide">
 	{% for post in site.posts %}
-		<li class="mb5"	>
-			<h2 class="mt0 mb1">
+		<li class="mb5">
+			<h2 class="mv0">
 				<a href="{{ post.url | prepend: site.baseurl }}" class="dim">
 					{{ post.title }}
 				</a>
 			</h2>
-			<h5 class="mv0 i normal" title="{{ post.date }}">Posted {{ post.date | date: '%B %-d, %Y' }}</h5>
+			<h5 class="mv0 normal" title="{{ post.date }}">Posted {{ post.date | date: '%B %-d, %Y' }}</h5>
 			{{ post.excerpt }}
 		</li>
 	{% endfor %}
