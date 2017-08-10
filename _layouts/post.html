@@ -4,26 +4,26 @@ layout: default
 <article class="measure-wide" itemscope itemtype="http://schema.org/BlogPosting" itemprop="articleBody">
 	<h1 class="mt0 mb1">{{ page.title }}</h1>
 	<h5 class="mt0 i normal">
-		Published {{ page.date | date: "%B %-d, %Y" }}
+		<span title="{{ page.date }}">Posted {{ page.date | date: "%B %-d, %Y" }}</span>
 		<span class="fw6 ml1 mr1">&middot;</span>
 		<a href="javascript:window.prompt('Here\'s a URL you can copy and share!', window.location.href)" class="dim link">Share</a>
-		<span class="fw6 ml1 mr1">&middot;</span>
-		<a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}" class="dim link">Permalink</a>
 	</h5>
 	{{ content }}
 </article>
 
-<aside class="measure-wide pv2 mt5 bt b--gray">
-	<nav>
-		{% if page.previous.url %}
-			<a href="{{ page.previous.url | prepend: site.baseurl }}" class="db w-50 fl dim link">🡐 {{ page.previous.title }}</a>
-		{% else %}
-			<span class="db w-50 fl">This is the oldest article.</span>
-		{% endif %}
-		{% if page.next.url %}
-			<a href="{{ page.next.url | prepend: site.baseurl }}" class="db w-50 fl tr dim link">{{ page.next.title }} 🡒</a>
-		{% else %}
-			<span class="db w-50 fl tr">This is the newest article.</span>
-		{% endif %}
-	</nav>
-</aside>
+{% if page.previous.url or page.next.url %}
+	<aside class="measure-wide pv2 mt5 bt b--gray">
+		<nav>
+			{% if page.previous.url %}
+				<a href="{{ page.previous.url | prepend: site.baseurl }}" class="db w-50 fl dim link">🡐 {{ page.previous.title }}</a>
+			{% else %}
+				<span class="db w-50 fl">&nbsp;</span>
+			{% endif %}
+			{% if page.next.url %}
+				<a href="{{ page.next.url | prepend: site.baseurl }}" class="db w-50 fl tr dim link">{{ page.next.title }} 🡒</a>
+			{% else %}
+				<span class="db w-50 fl tr">&nbsp;</span>
+			{% endif %}
+		</nav>
+	</aside>
+{% endif %}

@@ -11,7 +11,7 @@ permalink: /archive
 					{{ post.title }}
 				</a>
 			</h2>
-			<h5 class="mv0 i normal">Published {{ post.date | date: '%B %-d, %Y' }}</h5>
+			<h5 class="mv0 i normal" title="{{ post.date }}">Posted {{ post.date | date: '%B %-d, %Y' }}</h5>
 			{{ post.excerpt }}
 		</li>
 	{% endfor %}
