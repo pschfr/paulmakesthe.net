@@ -7,11 +7,11 @@
 		$header .= "X-Priority: 1";
 		$body .= $_POST['message'];
 		if(@mail($to, $subject, $body, $header)) {
-			header('Location: /contact.html?thanks');
+			header('Location: /contact?thanks');
 		} else {
-			header('Location: /contact.html?error');
+			header('Location: /contact?error');
 		}
 	} else {
-		header('Location: /contact.html?error');
+		header('Location: /contact?error');
 	}
 ?>
