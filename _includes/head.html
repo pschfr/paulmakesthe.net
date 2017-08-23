@@ -2,11 +2,31 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{% if page.url != '/' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
 	<title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title | escape }}, {{ site.tagline | escape }}</title>
 	<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}">
 	<link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl }}">
 	<meta name="theme-color" content="#000">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#000">
+	<link rel="shortcut icon" href="/img/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@{{ site.username }}">
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title | escape }}, {{ site.tagline | escape }}">
+	<meta name="twitter:description" content="{% if page.url != '/' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
+	<meta content="{{ site.title | escape }}, {{ site.tagline | escape }}" property="og:site_name">
+	<meta content="{% if page.url != '/' %}article{% else %}website{% endif %}" property="og:type">
+	<meta content="{% if page.url != '/' %}{{ page.content | strip_html | xml_escape | truncate: 200 }}{% else %}{{ site.description }}{% endif %}" property="og:description">
+	{% if page.date %}
+		<meta content="{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title | escape }}, {{ site.tagline | escape }}" property="og:title">
+		<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+		<meta content="{{ site.url }}/about" property="article:author">
+	{% endif %}
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:n,b,i">
 	<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
 </head>
