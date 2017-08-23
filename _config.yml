@@ -17,6 +17,7 @@ emailMD5: "434e1c10883e5ea54c5bfa918a1fa630"
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 # Changes links to articles/title.html
 permalink: /:categories/:title/

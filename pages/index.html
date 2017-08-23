@@ -4,15 +4,13 @@ permalink: /
 ---
 <div class="fl w-100 w-50-ns pr2-ns">
 	<h1 class="mt0 mb2">Hello there!</h1>
-	<h2 class="mt0">It&#8217;s nice to meet you.</h2>
-	<p>Welcome to my humble corner of the Internet.</p>
-	<p>Feel free to browse around, I won&#8217;t bite.</p>
+	<p>It's nice to meet you here. You've stumbled upon my humble little corner of the Internet. Feel free to browse around, I won't bite.</p>
 	<p class="mt5">
 		<span id="state">I last listened to: <br/></span>
 		<img id="cover" class="fl mt2 mr2 h2 w2" />
 		<span id="recenttracks">&hellip;</span>
 		<img src="{{ "/img/scrobbling.gif" | prepend: site.baseurl }}" alt="Now Playing" title="Now Playing" id="nowplaying" style="display: none" />
-		<small id="since" class="db" style="visibility: hidden">
+		<small id="since" class="db i" style="visibility: hidden">
 			That is one of <span id="number"></span> tracks since Sept. 2012!
 		</small>
 	</p>
@@ -21,15 +19,15 @@ permalink: /
 <div class="fl w-100 w-50-ns pl2-ns">
 	{% if site.available %}
 		<p class="ba br2 b--gray pa3 mb4 tc">
-			Hey! I&#8217;m currently looking for a new full-time position! If you or someone you know is looking, <a href="{{ "/contact" | prepend: site.baseurl }}" class="dim">contact me!</a>
+			Hey! I'm currently looking for a new full-time position! If you or someone you know is looking, <a href="{{ "/contact" | prepend: site.baseurl }}">contact me!</a>
 		</p>
 	{% endif %}
 	<h3 class="mt0">Latest Posts</h3>
 	<ul class="list pl0">
 		{% for post in site.posts %}
 			<li class="mb2">
-				<a href="{{ post.url | prepend: site.baseurl }}" class="dim">{{ post.title }}</a>
-				<small class="db" title="{{ post.date }}">{{ post.date | date: '%B %-d, %Y' }}</small>
+				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				<small class="db i" title="{{ post.date }}">{{ post.date | date: '%B %-d, %Y' }}</small>
 			</li>
 		{% endfor %}
 	</ul>

@@ -3,7 +3,8 @@
 		"name": "First Baptist Church of Lytle, TX",
 		"url": "https://firstbaptistchurchlytle.com/",
 		"date": "2017-07-21",
-		"description": "Here is some text describing this website. I will add more soon."
+		"description": "This WordPress-based site is a child theme of Baton, with a few additional polishes.",
+		"source": "https://github.com/pschfr/fbc-lytle"
 	},
 	{
 		"name": "Kyle Plaskon, Multidisciplinary Designer",

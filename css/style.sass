@@ -14,19 +14,15 @@ body
 main
 	flex: 1
 
-// Improved sans font stack, workaround for
-// https://github.com/tachyons-css/tachyons/issues/340
-.sans
-	font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, noto, 'helvetica neue', helvetica, arial, ubuntu, sans-serif
-
 // New font
 .muli
 	font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, noto, 'helvetica neue', helvetica, arial, ubuntu, sans-serif
 	font-size: 17px
 
-// The most important part - the focus outline
-a, input, textarea, button
+// Keeps the font the same on all inputs and links
+a, input, textarea, select, button
 	font-family: inherit
+	// The most important part - the focus outline
 	&:focus
 		outline: 1px solid !important
 
@@ -39,10 +35,10 @@ a
 	// Remove weird blue bg on mobile
 	-webkit-tap-highlight-color: transparent
 	// Smoother transitions throughout
-	transition: all .25s !important
-	// Removes additional underline on focus
+	transition: all 0.15s ease-in !important
 	&:focus
 		text-decoration: none
+		border: none
 	// Better focus rings on .grow
 	&.grow
 		border: 1px solid transparent
@@ -50,10 +46,31 @@ a
 			outline: none !important
 			border-color: inherit
 
-// Google Maps bg color before map fully loads
+// Makes every link light blue on hover, so I don't have to add the class everywhere
+// https://blakewilliams.me/posts/jekyll-markdown-and-tachyons#a-more-sustainable-approach
+a:not(.grow)
+	@extend .hover-light-blue
+
+// Resets every input like Tachyons
+input
+	@extend .input-reset
+
+// Resets Google Maps background color before map fully loads
 #map > div
-	background-color: #000 !important
+	background-color: transparent !important
 
 // stuff with titles gets help cursor, but not links
 [title]:not([href])
 	cursor: help
+
+// Better way to set ::selection once, see https://stackoverflow.com/a/18580561/
+@mixin selection
+	::-moz-selection
+		@content
+	::selection
+		@content
+
+// ...and now in action
+@include selection
+	background-color: transparentize($light-blue, 0.01)
+	color: black

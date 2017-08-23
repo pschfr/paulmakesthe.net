@@ -8,13 +8,14 @@ One of the first things a programmer does when learning a new language is figure
 
 &nbsp;
 
-```c
+{% highlight c %}
 #include <stdio.h>
 
 main() {
 	printf("Hello, World!\n");
 }
-```
+{% endhighlight %}
+
 <small>*This is the programming language C, from a 1974 Bell Laboratories book. See the [Wikipedia article](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) about Hello World.*</small>
 
 &nbsp;

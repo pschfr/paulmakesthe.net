@@ -1,7 +1,7 @@
 <?php
-	if(!empty($_POST['name']) && !empty($_POST['email'])) {
+	if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject'])) {
 		$to = "hello@paulmakesthe.net";
-		$subject = "Message from your website!";
+		$subject = $_POST['subject'];
 		$header  = "Reply-To: <" . $_POST['email'] . ">\n";
 		$header .= "X-Mailer: PHP/" . phpversion() . "\n";
 		$header .= "X-Priority: 1";

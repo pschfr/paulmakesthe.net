@@ -3,10 +3,10 @@ layout: default
 ---
 <article class="measure-wide" itemscope itemtype="http://schema.org/BlogPosting" itemprop="articleBody">
 	<h1 class="mt0 mb1">{{ page.title }}</h1>
-	<h5 class="mt0 normal">
+	<h5 class="mt0 normal i">
 		<span title="{{ page.date }}">Posted {{ page.date | date: "%B %-d, %Y" }}</span>
 		<span class="fw6 ml1 mr1">&middot;</span>
-		<a href="javascript:window.prompt('Here\'s a URL you can copy and share!', window.location.href)" class="dim link">Share</a>
+		<a href="javascript:window.prompt('Here\'s a URL you can copy and share!', window.location.href)" class="link">Share</a>
 	</h5>
 	{{ content }}
 </article>
@@ -15,15 +15,32 @@ layout: default
 	<aside class="measure-wide pv2 mt5 bt b--gray">
 		<nav>
 			{% if page.previous.url %}
-				<a href="{{ page.previous.url | prepend: site.baseurl }}" class="db w-50 fl dim link">🡐 {{ page.previous.title }}</a>
+				<a href="{{ page.previous.url | prepend: site.baseurl }}" class="db w-50 fl link">&larr; {{ page.previous.title }}</a>
 			{% else %}
 				<span class="db w-50 fl">&nbsp;</span>
 			{% endif %}
 			{% if page.next.url %}
-				<a href="{{ page.next.url | prepend: site.baseurl }}" class="db w-50 fl tr dim link">{{ page.next.title }} 🡒</a>
+				<a href="{{ page.next.url | prepend: site.baseurl }}" class="db w-50 fl tr link">{{ page.next.title }} &rarr;</a>
 			{% else %}
 				<span class="db w-50 fl tr">&nbsp;</span>
 			{% endif %}
 		</nav>
 	</aside>
+{% endif %}
+
+{% if page.comments != false %}
+	<div id="disqus_thread" class="measure-wide mt5"></div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "{{ site.url }}";
+			this.page.identifier = "{{ page.url | prepend: site.url }}";
+		};
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://paulmakesthe-net.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endif %}

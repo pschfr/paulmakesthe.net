@@ -23,7 +23,7 @@ function lastFM_request() {
 			}
 
 			// prints link to song with artist and song name
-			document.getElementById('recenttracks').innerHTML = '<a href="' + url + '" target="_blank" rel="noreferrer noopener" title="on ' + album + '" class="dim link">' + artist + ' &mdash; ' + song + '</a>';
+			document.getElementById('recenttracks').innerHTML = '<a href="' + url + '" title="on ' + album + '" class="link">' + artist + ' &ndash; ' + song + '</a>';
 
 			// Displays number of tracks scrobbled
 			document.getElementById('since').style.visibility = 'visible';

@@ -1,0 +1,18 @@
+---
+layout: page
+title: Labs
+permalink: /labs
+---
+<small class="i">These are just a few of my many open-source experiments. View the rest on my <a href="https://github.com/{{ site.username }}">GitHub</a>.</small>
+
+<ul class="list pl0 measure-wide">
+	{% for piece in site.data.labs %}
+		<li class="mt4 mb5">
+			<h2 class="f4 mb1">
+				<a href="{{ piece.url }}">{{ piece.name }}</a>
+				<small class="normal">{{ piece.date | date: '%B %-d, %Y' }}</small>
+			</h2>
+			<p class="mt0">{{ piece.description }}</p>
+		</li>
+	{% endfor %}
+</ul>

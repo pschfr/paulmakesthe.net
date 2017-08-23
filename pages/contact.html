@@ -6,13 +6,19 @@ permalink: /contact
 <article class="fl w-100 w-two-thirds-ns pr2-ns">
 	<p>Have any questions, or want to say hello? Use the form below, or email me at <a href="mailto:hello@paulmakesthe.net">hello@paulmakesthe.net</a>.</p>
 	<form action="{{ "/php/mailer.php" | prepend: site.url }}" method="post" class="mv4">
-		<label for="name">What&#8217;s your name?</label><br/>
-		<input type="text" name="name" class="input-reset pa2 w-75-ns w-100 ba b--gray bg-black white" placeholder="John Doe" required /><br/><br/>
-		<label for="email">What&#8217;s your email?</label><br/>
-		<input type="email" name="email" class="input-reset pa2 w-75-ns w-100 ba b--gray bg-black white" placeholder="email@mail.com" required /><br/><br/>
-		<label for="message">What&#8217;s up?</label><br/>
-		<textarea name="message" class="input-reset pa2 w-75-ns h4 w-100 ba b--gray bg-black white"></textarea><br/><br/>
+		<label for="name">What's your name?</label><br/>
+		<input type="text" name="name" class="pa2 w-75-ns w-100 ba b--gray bg-black white" required /><br/><br/>
+		<label for="email">What's your email?</label><br/>
+		<input type="email" name="email" class="pa2 w-75-ns w-100 ba b--gray bg-black white" required /><br/><br/>
+		<label for="subject">What do you want to talk about?</label><br/>
+		<select name="subject" class="pa2 w-75-ns w-100 ba b--gray bg-black white" required>
+			<option value=""></option>
+			<option value="inquiry">I have a project for you!</option>
+			<option value="chat">I just want to say hello!</option>
+		</select><br/><br/>
+		<label for="message">What's up?</label><br/>
+		<textarea name="message" class="pa2 w-75-ns h4 w-100 ba b--gray bg-black white"></textarea><br/><br/>
 		<button type="submit" class="btn pv2 ph3 w-auto grow pointer ba b--gray bg-black white">Send!</button>
 	</form>
 </article>
-<article id="map" class="fl w-100 w-third-ns pl2-ns vh-50"></article>
+<article id="map" class="fl w-100 w-third-ns pl2-ns vh-75"></article>
