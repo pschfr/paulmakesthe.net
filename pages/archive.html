@@ -4,7 +4,8 @@ title: Blog
 permalink: /archive
 ---
 <small class="i">Subscribe to the <abbr title="Really Simple Syndication">RSS</abbr> <a href="/feed.xml">feed</a>. Also available in <a href="/feed.json">JSON</a>.</small>
-<ul class="list pl0 mb0 measure-wide">
+
+<ul class="list pl0 measure-wide">
 	{% for post in site.posts %}
 		<li class="mb5">
 			<h2 class="mv0">
@@ -12,7 +13,7 @@ permalink: /archive
 					{{ post.title }}
 				</a>
 			</h2>
-			<h5 class="mv0 normal i" title="{{ post.date }}">Posted {{ post.date | date: '%B %-d, %Y' }}</h5>
+			<h5 class="mv0 normal i" title="{{ post.date }}">{{ post.date | date: '%B %-d, %Y' }}</h5>
 			{{ post.excerpt }}
 		</li>
 	{% endfor %}

@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running, with LiveReload!
 # Happy Jekylling!
-gem "jekyll", "3.5.0"
+gem "jekyll", "3.5.2"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do

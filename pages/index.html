@@ -3,25 +3,26 @@ layout: page
 permalink: /
 ---
 <div class="fl w-100 w-50-ns pr2-ns">
-	<h1 class="mt0 mb2">Hello there!</h1>
-	<p>It's nice to meet you here. You've stumbled upon my humble little corner of the Internet. Feel free to browse around, I won't bite.</p>
+	<!-- <h1 class="mt0 mb2">Hello there!</h1> -->
+	<p class="mt0"><strong>Hello!</strong> It's nice to meet you here. You've stumbled upon my humble little corner of the Internet. Take a look at my <a href="{{ "/work" | prepend: site.baseurl }}">client work,</a> or my fun open-source <a href="{{ "/labs" | prepend: site.baseurl }}">experiments.</a></p>
+	{% if site.available %}
+		<p>
+			I am currently looking for a new full-time position! If you or someone you know is looking, <a href="{{ "/contact" | prepend: site.baseurl }}">get in touch,</a> or view my <a href="{{ site.url }}/resume">r&eacute;sum&eacute;</a>.
+		</p>
+	{% endif %}
 	<p class="mt5">
 		<span id="state">I last listened to: <br/></span>
 		<img id="cover" class="fl mt2 mr2 h2 w2" />
 		<span id="recenttracks">&hellip;</span>
 		<img src="{{ "/img/scrobbling.gif" | prepend: site.baseurl }}" alt="Now Playing" title="Now Playing" id="nowplaying" style="display: none" />
 		<small id="since" class="db i" style="visibility: hidden">
-			That is one of <span id="number"></span> tracks since Sept. 2012!
+			That makes <span id="number"></span> tracks since Sept. 2012!
 		</small>
+		<small class="db mt2">Feel free to explore <a href="{{ "/about#artists" | prepend: site.baseurl }}">my favorite artists!</a></small>
 	</p>
 </div>
 
 <div class="fl w-100 w-50-ns pl2-ns">
-	{% if site.available %}
-		<p class="ba br2 b--gray pa3 mb4 tc">
-			Hey! I'm currently looking for a new full-time position! If you or someone you know is looking, <a href="{{ "/contact" | prepend: site.baseurl }}">contact me!</a>
-		</p>
-	{% endif %}
 	<h3 class="mt0">Latest Posts</h3>
 	<ul class="list pl0">
 		{% for post in site.posts %}

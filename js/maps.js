@@ -8,6 +8,6 @@ function initMap() {
 		zoom: 12,
 		scrollwheel: false,
 		center: pitt,
-		styles: style
+		// styles: style
 	});
 }

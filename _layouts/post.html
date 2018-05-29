@@ -2,12 +2,8 @@
 layout: default
 ---
 <article class="measure-wide" itemscope itemtype="http://schema.org/BlogPosting" itemprop="articleBody">
-	<h1 class="mt0 mb1">{{ page.title }}</h1>
-	<h5 class="mt0 normal i">
-		<span title="{{ page.date }}">Posted {{ page.date | date: "%B %-d, %Y" }}</span>
-		<span class="fw6 ml1 mr1">&middot;</span>
-		<a href="javascript:window.prompt('Here\'s a URL you can copy and share!', window.location.href)" class="link">Share</a>
-	</h5>
+	<h1 class="mv0">{{ page.title }}</h1>
+	<h5 class="mt0 normal i" title="{{ page.date }}">{{ page.date | date: "%B %-d, %Y" }}</h5>
 	{{ content }}
 </article>
 
@@ -28,7 +24,7 @@ layout: default
 	</aside>
 {% endif %}
 
-{% if page.comments != false %}
+{% if page.comments != false and jekyll.environment == 'production' %}
 	<div id="disqus_thread" class="measure-wide mt5"></div>
 	<script>
 		var disqus_config = function () {

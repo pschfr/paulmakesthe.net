@@ -4,12 +4,13 @@ layout: compress
 <!DOCTYPE html>
 <html lang="en-US">
 	{% include head.html %}
-	<body class="muli bg-black white">
+	<body class="bg-light-gray near-black code">
 		{% include header.html %}
 		<main class="mw8 mw7-m center w-100 pv4-ns pa3 lh-copy">
 			{{ content }}
 		</main>
 		{% include footer.html %}
+		<script src="{{ "/js/day.js" | prepend: site.baseurl }}" async></script>
 		{% if page.url == '/' %}
 			<script src="{{ "/js/streaming.js" | prepend: site.baseurl }}" async></script>
 		{% elsif page.url == '/about' %}

@@ -1,10 +1,10 @@
-<header class="pv4-ns pa3 mw8 mw7-m center w-100 tracked">
-	<h1 class="mt0 mb0 mr3-ns dib"><a class="link" href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a></h1>
-	<h2 class="mt0 mb3 f5-ns f6 dib">{{ site.tagline }}</h2>
+<header class="pv4-ns pa3 mw8 mw7-m center w-100">
+	<h1 class="mt0 mb0 mr3-ns dib"><a href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a></h1>
+	<h2 class="mt0 mb3 f4 dib">{{ site.tagline }}</h2>
 	<nav>
 		{% for link in site.pages %}
 			{% if link.title %}
-				<a href="{{ link.permalink | prepend: site.baseurl }}" class="link mr3 {% if page.url == link.url %}bb fw7{% endif %}">{{ link.title | downcase }}</a>
+				<a href="{{ link.permalink | prepend: site.baseurl }}" class="mr2 {% if page.url == link.url %}underline fw7{% endif %}">{{ link.title | downcase }}</a>
 			{% endif %}
 		{% endfor %}
 	</nav>
