@@ -20,12 +20,8 @@ header
 	a
 		text-decoration: none
 
-// Custom font from Google Fonts, with better system sans-serif fallback
-.muli
-	font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, noto, 'helvetica neue', helvetica, arial, ubuntu, sans-serif
-	// font-size: 17px
-
-.code
+// Custom font from Google Fonts, with monospace fallback
+code, .code
 	font-family: 'IBM Plex Mono', monospace
 
 // Keeps the font the same on all inputs and links
@@ -55,10 +51,9 @@ a
 	// No underline on .grow
 	&.grow
 		@extend .no-underline
-		&:hover, &:focus
-			@extend .light-gray
-			border: none
-			
+		&:hover
+			@extend .color-inherit
+
 
 // Resets Google Maps background color before map fully loads
 #map > div
