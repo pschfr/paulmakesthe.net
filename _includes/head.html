@@ -26,7 +26,6 @@
 		<meta content="{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ site.title | escape }}, {{ site.tagline | escape }}" property="og:title">
 		<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
 		<meta content="{{ site.url }}/about" property="article:author">
-		<link rel="amphtml" href="https://mercury.postlight.com/amp?url={{ site.url }}{{ page.url }}">
 	{% endif %}
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:n,b,i">
 	<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
