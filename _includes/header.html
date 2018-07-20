@@ -3,7 +3,7 @@
 	<h2 class="mt0 mb3 f4 dib">{{ site.tagline }}</h2>
 	<nav>
 		{% for link in site.pages %}
-			{% if link.title %}
+			{% if link.title and link.sitemap != false %}
 				<a href="{{ link.permalink | prepend: site.baseurl }}" class="mr2 {% if page.url == link.url %}underline fw7{% endif %}">{{ link.title | downcase }}</a>
 			{% endif %}
 		{% endfor %}
