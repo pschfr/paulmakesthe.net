@@ -36,7 +36,7 @@ function lastFM_request() {
 				d.getElementById('state').innerHTML = 'I am currently listening to:<br/>';
 				d.getElementById('nowplaying').style.display = 'inline-block';
 			} else {
-				d.getElementById('state').innerHTML = 'I am last listened to:<br/>';
+				d.getElementById('state').innerHTML = 'I last listened to:<br/>';
 				d.getElementById('nowplaying').style.display = 'none';
 			}
 		} else {
