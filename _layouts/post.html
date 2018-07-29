@@ -11,12 +11,12 @@ layout: default
 	<aside class="measure-wide pv2 mt5 bt b--gray">
 		<nav>
 			{% if page.previous.url %}
-				<a href="{{ page.previous.url | prepend: site.baseurl }}" class="db w-50 fl link">&larr; {{ page.previous.title }}</a>
+				<a href="{{ page.previous.url | prepend: site.baseurl }}" class="db w-50 fl no-underline">&lt; {{ page.previous.title }}</a>
 			{% else %}
 				<span class="db w-50 fl">&nbsp;</span>
 			{% endif %}
 			{% if page.next.url %}
-				<a href="{{ page.next.url | prepend: site.baseurl }}" class="db w-50 fl tr link">{{ page.next.title }} &rarr;</a>
+				<a href="{{ page.next.url | prepend: site.baseurl }}" class="db w-50 fl tr no-underline">{{ page.next.title }} &gt;</a>
 			{% else %}
 				<span class="db w-50 fl tr">&nbsp;</span>
 			{% endif %}
