@@ -5,7 +5,7 @@ title: Paul Schaefer
 tagline: web designer & developer
 description: > # this means to ignore newlines until "baseurl:"
   Paul Schaefer is a web designer and developer living in the lovely Pittsburgh, PA.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/paulmakesthe.net" # the subpath of your site, e.g. /blog
 url: "https://paulmakesthe.net" # the base hostname & protocol for your site, e.g. http://example.com
 
 github: "https://github.com/pschfr/paulmakesthe.net"
@@ -45,3 +45,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - CNAME
+  - vendor
