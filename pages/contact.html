@@ -7,7 +7,7 @@ permalink: /contact
 	<form action="{{ "/php/mailer.php" | prepend: site.url }}" method="post" class="mv4">
 		<p>Have any questions, or want to say hello? Use the form below, or email me at <a href="mailto:hello@paulmakesthe.net">hello@paulmakesthe.net</a>.</p>
 		<p>I'm across the web on <a href="https://twitter.com/{{ site.username }}">Twitter</a>, <a href="https://instagram.com/{{ site.username }}">Instagram</a>, <a href="https://github.com/{{ site.username }}">GitHub</a>, and probably elsewhere as {{ site.username }}.</p>
-		<p>For those interested, here is my <a href="{{ site.url }}/resume" target="_blank">r&eacute;sum&eacute;</a>.</p>
+		<p>For those interested, here is my <a href="{{ site.githubURL }}/harp-resume" target="_blank">r&eacute;sum&eacute;</a>.</p>
 		<label for="name">What's your name?</label><br/>
 		<input type="text" name="name" autocomplete="name" class="pa2 w-75-ns w-100 ba b--gray bg-white" required /><br/><br/>
 		<label for="email">What's your email?</label><br/>

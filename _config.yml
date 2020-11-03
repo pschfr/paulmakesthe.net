@@ -9,6 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://paulmakesthe.net" # the base hostname & protocol for your site, e.g. http://example.com
 
 github: "https://github.com/pschfr/paulmakesthe.net"
+githubURL: "https://pschfr.github.io/"
 analytics: "UA-76037357-1"
 maps_key: "AIzaSyCXSuswDfS85nCe5rI4-1U4uKNK6SLuR3k"
 username: "pschfr"
@@ -45,3 +46,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - CNAME
+  - vendor
