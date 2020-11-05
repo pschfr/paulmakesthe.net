@@ -1,2 +1,2 @@
-var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-document.getElementById('day').innerHTML = days[new Date().getDay()];
+var now = new Date();
+document.getElementById('day').innerHTML = now.toLocaleString(window.navigator.language, {weekday: 'long'});
