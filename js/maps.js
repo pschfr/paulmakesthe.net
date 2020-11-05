@@ -1,5 +1,5 @@
 // Coordinates of downtown Pittsburgh
-var pitt = [40.4406, -79.9959];
+var pitt = {lat: 40.4406, lng: -79.9959};
 
 // Initiates the map on page load
 function initMap() {
