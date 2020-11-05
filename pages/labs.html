@@ -12,7 +12,7 @@ permalink: /labs
 				<a href="{{ piece.url }}">{{ piece.name }}</a>
 				<small class="normal i"><a href="{{ piece.source }}">View Source</a></small>
 			</h2>
-			<p class="mt0">{{ piece.description }}</p>
+			<p class="mt0">{{ piece.description | markdownify }}</p>
 		</li>
 	{% endfor %}
 </ul>

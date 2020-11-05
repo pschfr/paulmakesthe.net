@@ -10,7 +10,7 @@ permalink: /work
 				<a href="{{ piece.url }}" target="_blank">{{ piece.name }}</a>
 			</h2>
 			<h5 class="mv0 normal i">{{ piece.date | date: '%B %-d, %Y' }}</h5>
-			<p>{{ piece.description }}</p>
+			<p>{{ piece.description | markdownify }}</p>
 			{% if piece.source %}
 				<a href="{{ piece.source }}" target="_blank">
 					View Source
