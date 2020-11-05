@@ -1,5 +1,11 @@
 [
 	{
+		"name": "Barcoded",
+		"url": "https://pschfr.github.io/barcoded/",
+		"source": "https://github.com/pschfr/barcoded",
+		"description": "This website is a simple barcode generator, used for DPCIs, backroom locations, cart labels, or whatever you may need!"
+	},
+	{
 		"name": "Weatha",
 		"url": "https://paulmakesthe.net/weatha/",
 		"source": "https://github.com/pschfr/weatha",
@@ -13,9 +19,9 @@
 	},
 	{
 		"name": "Drinking Games",
-		"url": "https://paulmakesthe.net/drink/",
-		"source": "https://github.com/pschfr/drink",
-		"description": "A collection of drinking games, based on certain TV shows. It's also made into a website with the Harp web server."
+		"url": "https://pschfr.github.io/drinking-games/",
+		"source": "https://github.com/pschfr/drinking-games",
+		"description": "A collection of drinking games, based on certain TV shows. It's made into a website with [Nanoc](https://nanoc.ws/), a static site generator written in Ruby."
 	},
 	{
 		"name": "Iconic",
