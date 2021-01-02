@@ -3,11 +3,14 @@ layout: page
 title: Contact
 permalink: /contact
 ---
-<article class="fl w-100 w-two-thirds-ns pr2-ns">
-	<form action="{{ "/php/mailer.php" | prepend: site.url }}" method="post" class="mv4">
-		<p>Have any questions, or want to say hello? Use the form below, or email me at <a href="mailto:hello@paulmakesthe.net">hello@paulmakesthe.net</a>.</p>
-		<p>I'm across the web on <a href="https://twitter.com/{{ site.username }}">Twitter</a>, <a href="https://instagram.com/{{ site.username }}">Instagram</a>, <a href="https://github.com/{{ site.username }}">GitHub</a>, and probably elsewhere as {{ site.username }}.</p>
-		<p>For those interested, here is my <a href="{{ site.githubURL }}/harp-resume" target="_blank">r&eacute;sum&eacute;</a>.</p>
+<article class="fl w-100 pv2-ns">
+	<p>Have any questions, or want to say hello? Email me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+	<p>I'm also across the web on <a href="https://twitter.com/{{ site.username }}">Twitter</a>, <a href="https://instagram.com/{{ site.username }}">Instagram</a>, <a href="https://github.com/{{ site.username }}">GitHub</a>, and probably elsewhere as {{ site.username }}.</p>
+	<p>For those interested, here is my <a href="{{ site.githubURL }}/harp-resume" target="_blank">r&eacute;sum&eacute;</a>.</p>
+
+	<div id="map" class="fl w-100 vh-75"></div>
+
+	<!-- <form action="{{ "/php/mailer.php" | prepend: site.url }}" method="post" class="mv4">
 		<label for="name">What's your name?</label><br/>
 		<input type="text" name="name" autocomplete="name" class="pa2 w-75-ns w-100 ba b--gray bg-white" required /><br/><br/>
 		<label for="email">What's your email?</label><br/>
@@ -21,6 +24,6 @@ permalink: /contact
 		<label for="message">What's up?</label><br/>
 		<textarea name="message" class="pa2 w-75-ns h4 w-100 ba b--gray bg-white"></textarea><br/><br/>
 		<button type="submit" class="btn pv2 ph3 w-auto grow pointer ba b--gray bg-white">Send!</button>
-	</form>
+	</form> -->
 </article>
-<article id="map" class="fl w-100 w-third-ns pl2-ns vh-75"></article>
+<!-- <article id="map" class="fl w-100 w-third-ns pl2-ns vh-75"></article> -->

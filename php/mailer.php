@@ -1,6 +1,6 @@
 <?php
 	if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['subject'])) {
-		$to = "hello@paulmakesthe.net";
+		$to = "yeppaul2@gmail.com";
 		$subject = $_POST['subject'];
 		$header  = "Reply-To: <" . $_POST['email'] . ">\n";
 		$header .= "X-Mailer: PHP/" . phpversion() . "\n";
