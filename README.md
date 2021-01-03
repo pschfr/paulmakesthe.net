@@ -5,7 +5,7 @@ The lovely monospace font you see there is [IBM Plex Mono](https://fonts.google.
 
 ### Installing dependencies and running
 1. Clone / download this repo, then run `bundle install --path vendor/bundle`.
-2. After that completes, run `bundle exec jekyll serve --livereload -o --host 0.0.0.0`!
+2. After that completes, run `bundle exec jekyll serve` with the optional flags `--livereload`, `--open_url`, `--drafts`, or `--host 0.0.0.0`. Read more about Jekyll's build options [here](https://jekyllrb.com/docs/configuration/options/#build-command-options).
 
 ### Running as production
 Use `JEKYLL_ENV=production bundle exec jekyll serve` to compile and serve like production.
