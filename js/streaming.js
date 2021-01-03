@@ -12,7 +12,7 @@ function lastFM_request() {
 				album = track.album['\#text'],
 				song = track.name,
 				url = track.url,
-				img = track.image[1]['\#text'],
+				img = track.image[3]['\#text'],
 				cover = d.getElementById('cover');
 
 			if (img !== '') { // if image exists, print

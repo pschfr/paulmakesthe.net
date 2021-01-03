@@ -2,7 +2,7 @@
 layout: page
 permalink: /
 ---
-<div class="fl w-100 w-50-ns pr2-ns">
+<div class="fl w-100 w-50-ns pr4-ns">
 	<p class="mt0"><strong>Hello!</strong> It's nice to meet you here. You've stumbled upon my humble little corner of the Internet. Take a look at my <a href="{{ "/work" | prepend: site.baseurl }}">client work</a>, or my fun open-source <a href="{{ "/labs" | prepend: site.baseurl }}">experiments</a>.</p>
 	{% if site.available %}
 		<p>
@@ -11,18 +11,18 @@ permalink: /
 	{% endif %}
 	<p class="mt5">
 		<span id="state">I last listened to: <br/></span>
-		<img id="cover" class="fl mt2 mr2 h2 w2" />
+		<img id="cover" class="fl-ns db mt2 mr2 mb2 h4 w4" />
 		<span id="recenttracks">&hellip;</span>
 		<img src="{{ "/img/scrobbling.gif" | prepend: site.baseurl }}" alt="Now Playing" title="Now Playing" id="nowplaying" style="display: none" />
 		<small id="since" class="db i" style="visibility: hidden">
 			That makes <span id="number"></span> tracks since Sept. 2012!
 		</small>
-		<small class="db mt2">Feel free to explore <a href="{{ "/about#artists" | prepend: site.baseurl }}">my favorite artists!</a></small>
+		<small class="db mt2">Feel free to explore <a href="{{ "/about#artists" | prepend: site.baseurl }}">my favorite artists</a>, or the rest of my music taste on <a href="https://www.last.fm/user/paul_r_schaefer">Last.fm</a>!</small>
 	</p>
 </div>
 
-<div class="fl w-100 w-50-ns pl2-ns">
-	<h3 class="mt0">Latest Posts</h3>
+<div class="fl w-100 w-50-ns pl4-ns">
+	<h3 class="mt0-ns mt5">Latest Posts</h3>
 	<ul class="list pl0">
 		{% for post in site.posts %}
 			<li class="mb2">
