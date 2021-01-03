@@ -7,12 +7,14 @@ permalink: /labs
 
 <ul class="list pl0 measure-wide">
 	{% for piece in site.data.labs %}
-		<li class="mt4 mb5">
-			<h2 class="f4 mb1">
-				<a href="{{ piece.url }}">{{ piece.name }}</a>
-				<small class="normal i"><a href="{{ piece.source }}">View Source</a></small>
-			</h2>
-			<p class="mt0">{{ piece.description | markdownify }}</p>
-		</li>
+		{% unless piece.hidden == true %}
+			<li class="mt4 mb5">
+				<h2 class="f4 mb1">
+					<a href="{{ piece.url }}">{{ piece.name }}</a>
+					<small class="normal i"><a href="{{ piece.source }}">View Source</a></small>
+				</h2>
+				<p class="mt0">{{ piece.description | markdownify }}</p>
+			</li>
+		{% endunless %}
 	{% endfor %}
 </ul>

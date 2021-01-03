@@ -1,5 +1,23 @@
 [
 	{
+		"name": "Watching",
+		"url": "https://watching-pschfr.herokuapp.com/",
+		"source": "https://github.com/pschfr/watching",
+		"description": "This is a Sinatra app that is a movie watchlist using the tmdb-api gem.<br/><small class='i'>(Warning: may take a while to load.)</small>"
+	},
+	{
+		"name": "Start",
+		"url": "https://pschfr.github.io/start/dist/",
+		"source": "https://github.com/pschfr/start",
+		"description": "Personal new tab page with keyboard navigation, bookmarks, weather, quotes, most recently listened to song, unread emails, and a random image background."
+	},
+	{
+		"name": "R&eacute;sum&eacute;",
+		"url": "https://pschfr.github.io/harp-resume/",
+		"source": "https://github.com/pschfr/harp-resume",
+		"description": "This is my r&eacute;sum&eacute;! It's made into a website with harp, tachyons-sass, tachyons-print, and some magic!"
+	},
+	{
 		"name": "Barcoded",
 		"url": "https://pschfr.github.io/barcoded/",
 		"source": "https://github.com/pschfr/barcoded",
@@ -9,13 +27,15 @@
 		"name": "Weatha",
 		"url": "https://paulmakesthe.net/weatha/",
 		"source": "https://github.com/pschfr/weatha",
-		"description": "Simple weather app built with NPM, Gulp, CoffeeScript, Pug, and Sass. The weather information comes from Dark Sky, weather icons are Skycons, also from Dark Sky."
+		"description": "Simple weather app built with NPM, Gulp, CoffeeScript, Pug, and Sass. The weather information comes from Dark Sky, weather icons are Skycons, also from Dark Sky.",
+		"hidden": true
 	},
 	{
 		"name": "Watchlist",
 		"url": "https://paulmakesthe.net/watchlist/",
 		"source": "https://github.com/pschfr/watchlist",
-		"description": "My girlfriend and I made a list of movies we have and would like to watch! It's made into a website with the Harp web server, The Movie Database and some magic!"
+		"description": "My girlfriend and I made a list of movies we have and would like to watch! It's made into a website with the Harp web server, The Movie Database and some magic!",
+		"hidden": true
 	},
 	{
 		"name": "Drinking Games",
@@ -27,6 +47,7 @@
 		"name": "Iconic",
 		"url": "https://paulmakesthe.net/iconic/",
 		"source": "https://github.com/pschfr/iconic",
-		"description": "A one-stop shop for easy copy/pasting of all the HTML needed for using icon fonts in your webpages. Just click, and bam! Right in your clipboard."
+		"description": "A one-stop shop for easy copy/pasting of all the HTML needed for using icon fonts in your webpages. Just click, and bam! Right in your clipboard.",
+		"hidden": true
 	}
 ]
