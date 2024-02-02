@@ -1,7 +1,7 @@
 # [paulmakesthe.net](https://paulmakesthe.net/)
 Made with [Tachyons-Sass](https://github.com/tachyons-css/tachyons-sass), [Jekyll](https://jekyllrb.com), and a custom version of my [LastFM.js](https://github.com/pschfr/LastFM.js).
 
-The lovely monospace font you see there is [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono).
+The lovely monospace font you see there is [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono), and [Open Sans](https://fonts.google.com/specimen/Open+Sans) is the body text. I got the circuit board background image from [Hero Patterns](https://www.heropatterns.com/).
 
 ### Installing dependencies and running
 1. Clone / download this repo, then run `bundle install`.
