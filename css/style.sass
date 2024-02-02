@@ -12,6 +12,7 @@ body
 main
 	flex: 1
 
+// No underline needed in the header
 header a
 	@extend .no-underline
 
@@ -30,7 +31,6 @@ input, textarea, select, button
 			outline: 1px solid $red !important
 			border-color: $red
 
-
 a
 	// Makes every link the proper color on hover, so I don't have to add the class everywhere
 	// https://blakewilliams.me/posts/jekyll-markdown-and-tachyons#a-more-sustainable-approach
@@ -48,3 +48,9 @@ a
 		@extend .no-underline
 		&:hover
 			@extend .color-inherit
+
+// custom / before headings
+#page_title
+	@extend .ttl
+	&::before
+		content: '/'
